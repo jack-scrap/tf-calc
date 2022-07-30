@@ -1,19 +1,5 @@
 @import "col.scss";
-
-@font-face {
-	font-family: TF2;
-	src: url('/res/font/TF2.ttf');
-}
-
-@font-face {
-	font-family: TF2 Secondary;
-	src: url('/res/font/TF2 Secondary.ttf');
-}
-
-@font-face {
-	font-family: TF2 Build;
-	src: url('/res/font/TF2 Build.ttf');
-}
+@import "font.scss";
 
 body {
 	background: $sec;
