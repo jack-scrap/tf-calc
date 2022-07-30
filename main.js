@@ -4,9 +4,9 @@ $(document).ready(function() {
 	}
 	$("#keyPad").append(`<div class="btn">${0}</div>`);
 
-	$("#keyPad").append("<div class='btn metal'>Scrap</div>");
-	$("#keyPad").append("<div class='btn metal'>Reclaimed</div>");
-	$("#keyPad").append("<div class='btn metal'>Refined</div>");
+	$("#keyPad").append("<div class='btn metal'><img src='res/icon/scrap.png' /></div>");
+	$("#keyPad").append("<div class='btn metal'><img src='res/icon/rec.png' /></div>");
+	$("#keyPad").append("<div class='btn metal'><img src='res/icon/ref.png' /></div>");
 
 	$("#keyPad").append("<div class='btn' id='enter'>Enter</div>");
 	$("#keyPad").append("<div class='btn' id='clr'>CLR</div>");
