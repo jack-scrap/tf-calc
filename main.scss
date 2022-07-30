@@ -24,6 +24,11 @@ body {
 	background: #BA3435;
 }
 
+#scr {
+	background: green;
+	padding: $pad;
+}
+
 #keyPad {
 	display: flex;
 	flex-wrap: wrap;
