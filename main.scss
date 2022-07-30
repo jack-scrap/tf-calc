@@ -24,28 +24,28 @@ body {
 	background: #BA3435;
 }
 
-#scr {
-	background: green;
-	padding: $pad;
-}
-
-#keyPad {
-	display: flex;
-	flex-wrap: wrap;
-	padding: $pad;
-	background: $prim;
-	width: 192px;
-
-	* {
-		 margin: $margin;
-	}
-
-	#enter {
-		flex-grow: 1;
-	}
-}
-
 #unit {
 	display: inline-block;
 	margin: $margin;
+
+	#scr {
+		background: green;
+		padding: $pad;
+	}
+
+	#keyPad {
+		display: flex;
+		flex-wrap: wrap;
+		padding: $pad;
+		background: $prim;
+		width: 192px;
+
+		* {
+	 		margin: $margin;
+		}
+
+		#enter {
+			flex-grow: 1;
+		}
+	}
 }
