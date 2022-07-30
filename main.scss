@@ -39,3 +39,8 @@ body {
 		flex-grow: 1;
 	}
 }
+
+#unit {
+	display: inline-block;
+	margin: $margin;
+}
