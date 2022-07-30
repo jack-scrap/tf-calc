@@ -10,4 +10,8 @@ $(document).ready(function() {
 
 	$("#keyPad").append("<div class='btn' id='enter'>Enter</div>");
 	$("#keyPad").append("<div class='btn' id='clr'>CLR</div>");
+
+	$("#clr").mousedown(function() {
+		$('#scr').empty();
+	});
 });
