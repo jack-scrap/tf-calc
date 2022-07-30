@@ -1,5 +1,20 @@
 @import "col.scss";
 
+@font-face {
+	font-family: TF2;
+	src: url('/TF2.ttf');
+}
+
+@font-face {
+	font-family: TF2 Secondary;
+	src: url('/TF2 Secondary.ttf');
+}
+
+@font-face {
+	font-family: TF2 Build;
+	src: url('/TF2 Build.ttf');
+}
+
 body {
 	background: $sec;
 }
@@ -8,6 +23,7 @@ body {
 	padding: 10px;
 	border-radius: 6px;
 	background: $tert;
+	font-family: TF2 Build;
 	cursor: pointer;
 }
 
