@@ -1,5 +1,6 @@
 @import "col.scss";
 @import "font.scss";
+@import "layout.scss";
 
 body {
 	background: $sec;
@@ -8,7 +9,7 @@ body {
 .btn {
 	min-width: 40px;
 	min-height: 40px;
-	padding: 6px;
+	padding: $pad;
 	border-radius: 6px;
 	background: $sec;
 	color: $tert;
@@ -26,12 +27,12 @@ body {
 #keyPad {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 6px;
+	padding: $pad;
 	background: $prim;
 	width: 192px;
 
 	* {
-		 margin: 6px;
+		 margin: $margin;
 	}
 
 	#enter {
