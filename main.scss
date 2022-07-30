@@ -27,6 +27,7 @@ body {
 #unit {
 	display: inline-block;
 	margin: $margin;
+	background: $prim;
 
 	#scr {
 		background: green;
@@ -39,7 +40,6 @@ body {
 		display: flex;
 		flex-wrap: wrap;
 		padding: $pad;
-		background: $prim;
 		width: 192px;
 
 		* {
