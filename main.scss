@@ -20,11 +20,13 @@ body {
 }
 
 .btn {
+	min-width: 16px;
 	padding: 10px;
 	border-radius: 6px;
 	background: $sec;
 	color: $tert;
 	font-family: TF2 Build;
+	text-align: center;
 	cursor: pointer;
 }
 
