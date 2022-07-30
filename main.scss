@@ -3,3 +3,18 @@
 body {
 	background: $sec;
 }
+
+.btn {
+	padding: 10px;
+	border-radius: 6px;
+	background: $tert;
+}
+
+#keyPad {
+	display: flex;
+	padding: 10px;
+
+	* {
+		 margin: 10px;
+	}
+}
