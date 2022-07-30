@@ -3,5 +3,5 @@ $(document).ready(function() {
 		$("#keyPad").append(`<div class="btn">${i}</div>`);
 	}
 
-	$("#keyPad").append("<div class='btn'>Enter</div>");
+	$("#keyPad").append("<div class='btn' id='enter'>Enter</div>");
 });
