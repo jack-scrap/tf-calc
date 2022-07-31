@@ -64,21 +64,25 @@ body {
 		user-select: none;
 	}
 
-	#no,
-	#metal {
+	#keyPad {
 		display: flex;
-		flex-wrap: wrap;
-		padding: $pad;
-		width: 192px;
 
-		* {
-	 		margin: $margin;
-		}
+		#no,
+		#metal {
+			display: flex;
+			flex-wrap: wrap;
+			padding: $pad;
+			width: 192px;
 
-		.metal,
-		#enter,
-		#clr {
-			flex-grow: 1;
+			* {
+			 margin: $margin;
+			}
+
+			.metal,
+			#enter,
+			#clr {
+				 flex-grow: 1;
+			}
 		}
 	}
 }
