@@ -6,6 +6,16 @@ function drawScr() {
 	$("#scr").text(buff);
 }
 
+function ref(scrap) {
+	let whole = scrap / 9;
+	whole = parseInt(whole.toFixed());
+
+	let dec = scrap % 9;
+	dec = parseInt(dec.toFixed());
+
+	return whole + (dec / 10) + (dec / 100);
+}
+
 $(document).ready(function() {
 	// screen
 	drawScr();
@@ -75,8 +85,10 @@ $(document).ready(function() {
 	$("#enter").mousedown(function() {
 		let res = eval(tok);
 
+		let fmt = ref(res);
+
 		tok = [
-			res
+			fmt + " ref"
 		];
 
 		drawScr();
