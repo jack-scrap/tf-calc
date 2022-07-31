@@ -20,6 +20,14 @@ $(document).ready(function() {
 	$("#keyPad").append("<div class='btn' id='clr'>CLR</div>");
 
 	// ctrl
+	$(".no").mousedown(function() {
+		tok.push($(this).text());
+
+		buff = serialExpr(tok);
+
+		$("#scr").text(buff);
+	});
+
 	$("#clr").mousedown(function() {
 		$("#scr").empty();
 	});
