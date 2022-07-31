@@ -53,7 +53,7 @@ $(document).ready(function() {
 	});
 
 	$("#ref").mousedown(function() {
-		let no = 9;
+		let no = 3 * 3;
 
 		buff += no.toString();
 
