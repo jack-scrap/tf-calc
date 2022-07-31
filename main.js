@@ -30,7 +30,7 @@ $(document).ready(function() {
 	$(".no").mousedown(function() {
 		let i = $(this).index() + 1;
 
-		buff += parseInt(i);
+		buff += i;
 
 		drawScr();
 	});

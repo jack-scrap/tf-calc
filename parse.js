@@ -35,7 +35,7 @@ function eval(buff) {
 		}
 	}
 
-	let res = tok[0];
+	let res = parseInt(tok[0]);
 
 	if (!tok.length) {
 		return err("No tokens");
@@ -55,7 +55,7 @@ function eval(buff) {
 			return err(`Unexpected token '${tok[i + 1]}' at position ${i + 1}`);
 		}
 
-		let rhs = tok[i + 1];
+		let rhs = parseInt(tok[i + 1]);
 
 		switch (tok[i]) {
 			case "+":
