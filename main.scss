@@ -80,7 +80,8 @@ body {
 		display: flex;
 
 		#no,
-		#pure {
+		#pure,
+		#op {
 			display: flex;
 			flex-wrap: wrap;
 			padding: $pad;
@@ -100,7 +101,8 @@ body {
 			width: 192px;
 		}
 
-		#pure {
+		#pure,
+		#op {
 			margin-left: 20px;
 			height: 0;
 		}

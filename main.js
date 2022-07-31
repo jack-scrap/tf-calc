@@ -18,6 +18,11 @@ $(document).ready(function() {
 	}
 	$("#no").append(`<div class="btn no">${0}</div>`);
 
+	$("#op").append("<div class='btn'>+</div>")
+	$("#op").append("<div class='btn'>-</div>")
+	$("#op").append("<div class='btn'>*</div>")
+	$("#op").append("<div class='btn'>/</div>")
+
 	$("#pure").append("<div class='btn pure' id='scrap'><img src='res/icon/scrap.png' /></div>");
 	$("#pure").append("<div class='btn pure' id='rec'><img src='res/icon/rec.png' /></div>");
 	$("#pure").append("<div class='btn pure' id='ref'><img src='res/icon/ref.png' /></div>");
