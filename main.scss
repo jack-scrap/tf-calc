@@ -64,7 +64,8 @@ body {
 		user-select: none;
 	}
 
-	#no {
+	#no,
+	#metal {
 		display: flex;
 		flex-wrap: wrap;
 		padding: $pad;
