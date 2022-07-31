@@ -8,9 +8,9 @@ $(document).ready(function() {
 	$("#scr").text(buff);
 
 	for (let i = 0; i < 9; i++) {
-		$("#keyPad").append(`<div class="btn">${i + 1}</div>`);
+		$("#keyPad").append(`<div class="btn no">${i + 1}</div>`);
 	}
-	$("#keyPad").append(`<div class="btn">${0}</div>`);
+	$("#keyPad").append(`<div class="btn no">${0}</div>`);
 
 	$("#keyPad").append("<div class='btn metal'><img src='res/icon/scrap.png' /></div>");
 	$("#keyPad").append("<div class='btn metal'><img src='res/icon/rec.png' /></div>");
