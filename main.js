@@ -6,6 +6,9 @@ function drawScr() {
 	$("#scr").text(buff);
 }
 
+function eval(tok) {
+}
+
 $(document).ready(function() {
 	// screen
 	drawScr();
@@ -51,5 +54,9 @@ $(document).ready(function() {
 		tok = [];
 
 		drawScr();
+	});
+
+	$("#eval").mousedown(function() {
+		eval(tok);
 	});
 });
