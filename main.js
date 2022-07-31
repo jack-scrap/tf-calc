@@ -1,8 +1,7 @@
-let buff = "";
 let tok = [];
 
 function drawScr() {
-	buff = serialExpr(tok);
+	let buff = serialExpr(tok);
 
 	$("#scr").text(buff);
 }
