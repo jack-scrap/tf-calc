@@ -3,13 +3,7 @@ let tok = [];
 
 $(document).ready(function() {
 	// screen
-	for (let i = 0; i < tok.length; i++) {
-		buff += tok[i];
-
-		if (i < tok.length - 1) {
-			buff += ws;
-		}
-	}
+	buff = serial(tok);
 
 	$("#scr").text(buff);
 
