@@ -69,12 +69,15 @@ body {
 	#keyPad {
 		display: flex;
 
+		#no {
+			width: 192px;
+		}
+
 		#no,
 		#metal {
 			display: flex;
 			flex-wrap: wrap;
 			padding: $pad;
-			width: 192px;
 
 			* {
 			 margin: $margin;
