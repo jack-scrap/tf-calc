@@ -56,6 +56,12 @@ $(document).ready(function() {
 		drawScr();
 	});
 
+	$(".op").mousedown(function() {
+		tok.push($(this).text());
+
+		drawScr();
+	});
+
 	$("#clr").mousedown(function() {
 		tok = [];
 
