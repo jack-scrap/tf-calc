@@ -3,7 +3,7 @@ let tok = [];
 
 $(document).ready(function() {
 	// screen
-	buff = serial(tok);
+	buff = serialExpr(tok);
 
 	$("#scr").text(buff);
 
