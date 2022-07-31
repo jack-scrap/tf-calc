@@ -48,7 +48,7 @@ $(document).ready(function() {
 	});
 
 	$('#scrap').mousedown(function() {
-		let no = metal['scrap'];
+		let val = metal['scrap'];
 
 		buff += no.toString();
 
@@ -56,7 +56,7 @@ $(document).ready(function() {
 	});
 
 	$('#rec').mousedown(function() {
-		let no = metal['rec'];
+		let val = metal['rec'];
 
 		buff += no.toString();
 
@@ -64,7 +64,7 @@ $(document).ready(function() {
 	});
 
 	$('#ref').mousedown(function() {
-		let no = metal['ref'];
+		let val = metal['ref'];
 
 		buff += no.toString();
 
