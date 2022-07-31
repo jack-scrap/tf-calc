@@ -51,7 +51,8 @@ body {
 	}
 
 	#scr {
-		height: calc(1ch + #{$pad});
+		height: 30px;
+		font-size: 30px;
 		background: rgb(0, 180, 0);
 		padding: $pad;
 		color: #fff;
