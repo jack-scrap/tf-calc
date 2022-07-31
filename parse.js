@@ -1,73 +1,86 @@
 const ws = " ";
 
 function eval(buff) {
+	// deserialize
 	let tok = [];
 	let i = 0;
-	while (i < buff.length) {
-		let no = Number(buff[i]);
 
-		let _ = "";
-		if (Number.isInteger(no)) {
-			while (Number.isInteger(buff[i])) {
+	while (i < buff.length) {
+		// number
+		if (!isNaN(buff[i])) {
+			let _ = "";
+			while (!isNaN(buff[i])) {
 				_ += buff[i];
 
 				i++;
 			}
 
 			tok.push(_);
+
+			continue;
 		}
 
-		i++;
+		// operator
+		if (isNaN(buff[i])) {
+			let _ = "";
+			while (isNaN(buff[i])) {
+				_ += buff[i];
+
+				i++;
+			}
+
+			tok.push(_);
+
+			continue;
+		}
 	}
 
-	return tok;
+	let res = tok[0];
 
-	// let res = tok[0];
+	if (!tok.length) {
+		return err("No tokens");
+	}
 
-// 	if (!tok.length) {
-// 		return err("No tokens");
-// 	}
+	if (tok.length > 1 && !(tok.length % 2)) {
+		return err(`Inappropriate number of tokens (${tok.length})`);
+	}
 
-// 	if (tok.length > 1 && !(tok.length % 2)) {
-// 		return err(`Inappropriate number of tokens (${tok.length})`);
-// 	}
+	let i = 1;
+	while (i < tok.length - 1) {
+		if (typeof tok[i] != "string") {
+			return err(`Unexpected token '${tok[i]}' at position ${i}`);
+		}
 
-// 	let i = 1;
-// 	while (i < tok.length - 1) {
-// 		if (typeof tok[i] != "string") {
-// 			return err(`Unexpected token '${tok[i]}' at position ${i}`);
-// 		}
+		if (typeof tok[i + 1] != "number") {
+			return err(`Unexpected token '${tok[i + 1]}' at position ${i + 1}`);
+		}
 
-// 		if (typeof tok[i + 1] != "number") {
-// 			return err(`Unexpected token '${tok[i + 1]}' at position ${i + 1}`);
-// 		}
+		let rhs = tok[i + 1];
 
-// 		let rhs = tok[i + 1];
+		switch (tok[i]) {
+			case "+":
+				res += rhs;
 
-// 		switch (tok[i]) {
-// 			case "+":
-// 				res += rhs;
+				break;
 
-// 				break;
+			case "-":
+				res -= rhs;
 
-// 			case "-":
-// 				res -= rhs;
+				break;
 
-// 				break;
+			case "*":
+				res *= rhs;
 
-// 			case "*":
-// 				res *= rhs;
+				break;
 
-// 				break;
+			case "/":
+				res *= rhs;
 
-// 			case "/":
-// 				res *= rhs;
+				break;
+		}
 
-// 				break;
-// 		}
-
-// 		i += 1 + 1;
-// 	}
+		i += 1 + 1;
+	}
 
 	return res;
 }

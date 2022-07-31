@@ -74,8 +74,6 @@ $(document).ready(function() {
 	$("#enter").mousedown(function() {
 		let res = eval(buff);
 
-		alert(res);
-
 		let fmt = ref(res);
 
 		buff = fmt + " ref"
