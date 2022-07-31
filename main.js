@@ -42,7 +42,7 @@ $(document).ready(function() {
 	$(".no").mousedown(function() {
 		let i = $(this).index() + 1;
 
-		buff += i;
+		buff += i.toString();
 
 		drawScr();
 	});
