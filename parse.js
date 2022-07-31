@@ -52,11 +52,16 @@ function eval(buff) {
 
 	let i = 1;
 	while (i < tok.length - 1) {
-		if (typeof tok[i] != "string") {
+		if (
+			tok[i] != "+" &&
+			tok[i] != "-" &&
+			tok[i] != "*" &&
+			tok[i] != "/"
+		) {
 			return err(`Unexpected token '${tok[i]}' at position ${i}`);
 		}
 
-		if (typeof tok[i + 1] != "number") {
+		if (isNaN(tok[i + 1])) {
 			return err(`Unexpected token '${tok[i + 1]}' at position ${i + 1}`);
 		}
 
