@@ -1,11 +1,12 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 
-const fName = 'schema.json';
+const confName = 'conf.json';
+const schemaName = 'schema.json';
 
 let key;
 try {
-	const buff = fs.readFileSync('conf.json');
+	const buff = fs.readFileSync(confName);
 
 	const json = JSON.parse(buff);
 
@@ -24,7 +25,7 @@ fetch(url)
 		try {
 			const serial = JSON.stringify(json.response);
 
-			fs.writeFileSync(fName, serial);
+			fs.writeFileSync(schemaName, serial);
 		} catch (err) {
 			console.error(err);
 		}
