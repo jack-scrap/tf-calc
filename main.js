@@ -1,3 +1,8 @@
+const ws = " ";
+
+let buff = "";
+let tok = [];
+
 $(document).ready(function() {
 	for (let i = 0; i < 9; i++) {
 		$("#keyPad").append(`<div class="btn">${i + 1}</div>`);
@@ -10,6 +15,16 @@ $(document).ready(function() {
 
 	$("#keyPad").append("<div class='btn' id='enter'>Enter</div>");
 	$("#keyPad").append("<div class='btn' id='clr'>CLR</div>");
+
+	for (let i = 0; i < tok.length; i++) {
+		buff += tok[i];
+
+		if (i < tok.length - 1) {
+			buff += ws;
+		}
+	}
+
+	$("#scr").text(buff);
 
 	$("#clr").mousedown(function() {
 		$('#scr').empty();
