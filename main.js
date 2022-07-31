@@ -7,26 +7,49 @@ function drawScr() {
 }
 
 function eval(tok) {
-	let res = 0;
+	let res = tok[0];
 
 	if (!tok.length) {
 		return err("No tokens");
 	}
 
-	if (tok.length % 2) {
+	if (tok.length > 1 && !(tok.length % 2)) {
 		return err(`Inappropriate number of tokens (${tok.length})`);
 	}
 
-	let i = 0;
-	while (i < tok.length) {
-		switch (typeof tok[i]) {
-			case "number":
-				res += tok[i];
+	let i = 1;
+	while (i < tok.length - 1) {
+		if (typeof tok[i] != "string") {
+			return err(`Unexpected token '${tok[i]}' at position ${i}`);
+		}
+
+		if (typeof tok[i + 1] != "number") {
+			return err(`Unexpected token '${tok[i + 1]}' at position ${i + 1}`);
+		}
+
+		switch (tok[i]) {
+			case "+":
+				res += tok[i + 1];
+
+				break;
+
+			case "-":
+				res -= tok[i + 1];
+
+				break;
+
+			case "*":
+				res *= tok[i + 1];
+
+				break;
+
+			case "/":
+				res *= tok[i + 1];
 
 				break;
 		}
 
-		i++;
+		i += 1 + 1;
 	}
 
 	return res;
