@@ -3,16 +3,16 @@ const ws = " ";
 function eval(buff) {
 	// deserialize
 	let tok = [];
-	let i = 0;
+	let c = 0;
 
-	while (i < buff.length) {
+	while (c < buff.length) {
 		// number
-		if (!isNaN(buff[i])) {
+		if (!isNaN(buff[c])) {
 			let _ = "";
-			while (!isNaN(buff[i])) {
-				_ += buff[i];
+			while (!isNaN(buff[c])) {
+				_ += buff[c];
 
-				i++;
+				c++;
 			}
 
 			tok.push(_);
@@ -21,12 +21,12 @@ function eval(buff) {
 		}
 
 		// operator
-		if (isNaN(buff[i])) {
+		if (isNaN(buff[c])) {
 			let _ = "";
-			while (isNaN(buff[i])) {
-				_ += buff[i];
+			while (isNaN(buff[c])) {
+				_ += buff[c];
 
-				i++;
+				c++;
 			}
 
 			tok.push(_);
