@@ -41,6 +41,7 @@ body {
 	background: $prim;
 
 	#scr {
+		height: calc(1ch + #{$pad});
 		background: rgb(0, 180, 0);
 		padding: $pad;
 		color: #fff;
