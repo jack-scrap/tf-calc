@@ -21,24 +21,26 @@ function eval(tok) {
 			return err(`Unexpected token '${tok[i + 1]}' at position ${i + 1}`);
 		}
 
+		let rhs = tok[i + 1];
+
 		switch (tok[i]) {
 			case "+":
-				res += tok[i + 1];
+				res += rhs;
 
 				break;
 
 			case "-":
-				res -= tok[i + 1];
+				res -= rhs;
 
 				break;
 
 			case "*":
-				res *= tok[i + 1];
+				res *= rhs;
 
 				break;
 
 			case "/":
-				res *= tok[i + 1];
+				res *= rhs;
 
 				break;
 		}
