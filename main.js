@@ -31,6 +31,8 @@ $(document).ready(function() {
 	});
 
 	$("#clr").mousedown(function() {
-		$("#scr").empty();
+		tok = [];
+
+		drawScr();
 	});
 });
