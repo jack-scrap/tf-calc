@@ -57,7 +57,7 @@ $(document).ready(function() {
 		drawScr();
 	});
 
-	$("#eval").mousedown(function() {
+	$("#enter").mousedown(function() {
 		eval(tok);
 	});
 });
