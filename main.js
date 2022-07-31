@@ -1,10 +1,20 @@
 let buff = '';
 
+let keyPrice;
+
 function drawScr() {
 	$('#scr').text(buff);
 }
 
 $(document).ready(function() {
+	fetch("schema.json")
+  	.then((response) => {
+			return response.json();
+  	})
+  	.then((json) => {
+			keyPrice = json['currencies']['keys']['price']['value'];
+  	});
+
 	// screen
 	drawScr();
 
@@ -55,6 +65,14 @@ $(document).ready(function() {
 		let val = metal['ref'];
 
 		buff += no.toString();
+
+		drawScr();
+	});
+
+	$('#key').mousedown(function() {
+		let val = keyPrice;
+
+		buff += val;
 
 		drawScr();
 	});
