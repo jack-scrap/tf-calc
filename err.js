@@ -1,5 +1,5 @@
 function err(msg) {
-	let buff = "Error: ";
+	let buff = 'Error: ';
 
 	buff += msg;
 

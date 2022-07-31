@@ -1,12 +1,12 @@
-let buff = "";
+let buff = '';
 
 function drawScr() {
-	$("#scr").text(buff);
+	$('#scr').text(buff);
 }
 
 $(document).ready(function() {
-	$.getJSON("conf.json", function(json) {
-		const url = "https://backpack.tf/api?key=" + json["key"];
+	$.getJSON('conf.json', function(json) {
+		const url = 'https://backpack.tf/api?key=' + json['key'];
 
 		fetch(url).then((resp) => {
 			resp.text().then((data) => {
@@ -21,25 +21,25 @@ $(document).ready(function() {
 	drawScr();
 
 	for (let i = 0; i < 9; i++) {
-		$("#no").append(`<div class="btn no">${i + 1}</div>`);
+		$('#no').append(`<div class='btn no'>${i + 1}</div>`);
 	}
-	$("#no").append(`<div class="btn no">${0}</div>`);
+	$('#no').append(`<div class='btn no'>${0}</div>`);
 
-	$("#op").append("<div class='btn op'>+</div>")
-	$("#op").append("<div class='btn op'>-</div>")
-	$("#op").append("<div class='btn op'>*</div>")
-	$("#op").append("<div class='btn op'>/</div>")
+	$('#op').append('<div class="btn op">+</div>')
+	$('#op').append('<div class="btn op">-</div>')
+	$('#op').append('<div class="btn op">*</div>')
+	$('#op').append('<div class="btn op">/</div>')
 
-	$("#pure").append("<div class='btn pure' id='scrap'><img src='res/icon/scrap.png' /></div>");
-	$("#pure").append("<div class='btn pure' id='rec'><img src='res/icon/rec.png' /></div>");
-	$("#pure").append("<div class='btn pure' id='ref'><img src='res/icon/ref.png' /></div>");
-	$("#pure").append("<div class='btn pure' id='ref'><img src='res/icon/key.png' /></div>");
+	$('#pure').append('<div class="btn pure" id="scrap"><img src="res/icon/scrap.png" /></div>');
+	$('#pure').append('<div class="btn pure" id="rec"><img src="res/icon/rec.png" /></div>');
+	$('#pure').append('<div class="btn pure" id="ref"><img src="res/icon/ref.png" /></div>');
+	$('#pure').append('<div class="btn pure" id="ref"><img src="res/icon/key.png" /></div>');
 
-	$("#no").append("<div class='btn' id='enter'>Enter</div>");
-	$("#no").append("<div class='btn' id='clr'>CLR</div>");
+	$('#no').append('<div class="btn" id="enter">Enter</div>');
+	$('#no').append('<div class="btn" id="clr">CLR</div>');
 
 	// ctrl
-	$(".no").mousedown(function() {
+	$('.no').mousedown(function() {
 		let i = $(this).index() + 1;
 
 		buff += i.toString();
@@ -47,7 +47,7 @@ $(document).ready(function() {
 		drawScr();
 	});
 
-	$("#scrap").mousedown(function() {
+	$('#scrap').mousedown(function() {
 		let no = 1;
 
 		buff += no.toString();
@@ -55,7 +55,7 @@ $(document).ready(function() {
 		drawScr();
 	});
 
-	$("#rec").mousedown(function() {
+	$('#rec').mousedown(function() {
 		let no = 3;
 
 		buff += no.toString();
@@ -63,7 +63,7 @@ $(document).ready(function() {
 		drawScr();
 	});
 
-	$("#ref").mousedown(function() {
+	$('#ref').mousedown(function() {
 		let no = 3 * 3;
 
 		buff += no.toString();
@@ -71,24 +71,24 @@ $(document).ready(function() {
 		drawScr();
 	});
 
-	$(".op").mousedown(function() {
+	$('.op').mousedown(function() {
 		buff += $(this).text();
 
 		drawScr();
 	});
 
-	$("#clr").mousedown(function() {
-		buff = "";
+	$('#clr').mousedown(function() {
+		buff = '';
 
 		drawScr();
 	});
 
-	$("#enter").mousedown(function() {
+	$('#enter').mousedown(function() {
 		let res = eval(buff);
 
 		let fmt = ref(res);
 
-		buff = fmt + " ref"
+		buff = fmt + ' ref'
 
 		drawScr();
 	});

@@ -1,5 +1,5 @@
 function serialExpr(tok) {
-	let buff = "";
+	let buff = '';
 	for (let i = 0; i < tok.length; i++) {
 		buff += tok[i];
 

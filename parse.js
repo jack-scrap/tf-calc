@@ -1,4 +1,4 @@
-const ws = " ";
+const ws = ' ';
 
 function token(buff) {
 	let c = 0;
@@ -6,7 +6,7 @@ function token(buff) {
 	while (c < buff.length) {
 		// number
 		if (!isNaN(buff[c])) {
-			let _ = "";
+			let _ = '';
 			while (!isNaN(buff[c])) {
 				_ += buff[c];
 
@@ -20,7 +20,7 @@ function token(buff) {
 
 		// operator
 		if (isNaN(buff[c])) {
-			let _ = "";
+			let _ = '';
 			while (isNaN(buff[c])) {
 				_ += buff[c];
 
@@ -43,7 +43,7 @@ function eval(buff) {
 	let res = parseInt(tok[0]);
 
 	if (!tok.length) {
-		return err("No tokens");
+		return err('No tokens');
 	}
 
 	if (tok.length > 1 && !(tok.length % 2)) {
@@ -53,10 +53,10 @@ function eval(buff) {
 	let i = 1;
 	while (i < tok.length - 1) {
 		if (
-			tok[i] != "+" &&
-			tok[i] != "-" &&
-			tok[i] != "*" &&
-			tok[i] != "/"
+			tok[i] != '+' &&
+			tok[i] != '-' &&
+			tok[i] != '*' &&
+			tok[i] != '/'
 		) {
 			return err(`Unexpected token '${tok[i]}' at position ${i}`);
 		}
@@ -68,22 +68,22 @@ function eval(buff) {
 		let rhs = parseInt(tok[i + 1]);
 
 		switch (tok[i]) {
-			case "+":
+			case '+':
 				res += rhs;
 
 				break;
 
-			case "-":
+			case '-':
 				res -= rhs;
 
 				break;
 
-			case "*":
+			case '*':
 				res *= rhs;
 
 				break;
 
-			case "/":
+			case '/':
 				res *= rhs;
 
 				break;
