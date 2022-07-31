@@ -21,6 +21,6 @@ $(document).ready(function() {
 
 	// ctrl
 	$("#clr").mousedown(function() {
-		$('#scr').empty();
+		$("#scr").empty();
 	});
 });
