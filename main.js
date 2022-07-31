@@ -28,7 +28,7 @@ $(document).ready(function() {
 
 	// ctrl
 	$(".no").mousedown(function() {
-		tok.push($(this).text());
+		tok.push(parseInt($(this).text()));
 
 		drawScr();
 	});
