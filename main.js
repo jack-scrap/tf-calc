@@ -37,19 +37,19 @@ $(document).ready(function() {
 	});
 
 	$("#scrap").mousedown(function() {
-		tok.push(0.11);
+		tok.push(1);
 
 		drawScr();
 	});
 
 	$("#rec").mousedown(function() {
-		tok.push(0.33);
+		tok.push(3);
 
 		drawScr();
 	});
 
 	$("#ref").mousedown(function() {
-		tok.push(1.0);
+		tok.push(9);
 
 		drawScr();
 	});
