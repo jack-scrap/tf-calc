@@ -5,6 +5,18 @@ function drawScr() {
 }
 
 $(document).ready(function() {
+	$.getJSON("conf.json", function(json) {
+		const url = "https://backpack.tf/api?key=" + json["key"];
+
+		fetch(url).then((resp) => {
+			resp.text().then((data) => {
+				alert(data);
+			});
+		}).catch((err) => {
+			alert(err);
+		});
+	});
+
 	// screen
 	drawScr();
 
