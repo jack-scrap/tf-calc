@@ -10,11 +10,11 @@ function eval(tok) {
 	let res = 0;
 
 	if (!tok.length) {
-		return "Error: No tokens";
+		return err("No tokens");
 	}
 
 	if (tok.length % 2) {
-		return "Error: Inappropriate number of tokens";
+		return err("Inappropriate number of tokens");
 	}
 
 	let i = 0;
