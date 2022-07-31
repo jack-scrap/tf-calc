@@ -1,8 +1,6 @@
-let tok = [];
+let buff = "";
 
 function drawScr() {
-	let buff = serialExpr(tok);
-
 	$("#scr").text(buff);
 }
 
@@ -33,43 +31,49 @@ $(document).ready(function() {
 	$(".no").mousedown(function() {
 		let i = $(this).index() + 1;
 
-		tok.push(parseInt(i));
+		buff += parseInt(i);
 
 		drawScr();
 	});
 
 	$("#scrap").mousedown(function() {
-		tok.push(1);
+		let no = 1;
+
+		buff += no.toString();
 
 		drawScr();
 	});
 
 	$("#rec").mousedown(function() {
-		tok.push(3);
+		let no = 3;
+
+		buff += no.toString();
 
 		drawScr();
 	});
 
 	$("#ref").mousedown(function() {
-		tok.push(9);
+		let no = 9;
+
+		buff += no.toString();
 
 		drawScr();
 	});
 
 	$(".op").mousedown(function() {
-		tok.push($(this).text());
+		buff += $(this).text();
 
 		drawScr();
 	});
 
 	$("#clr").mousedown(function() {
-		tok = [];
+		buff = "";
 
 		drawScr();
 	});
 
 	$("#spc").mousedown(function() {
-		tok.push(" ");
+		tok += " ";
 
 		drawScr();
 	});
@@ -79,9 +83,7 @@ $(document).ready(function() {
 
 		let fmt = ref(res);
 
-		tok = [
-			fmt + " ref"
-		];
+		buff = fmt + " ref"
 
 		drawScr();
 	});
