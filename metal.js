@@ -11,8 +11,8 @@ function ref(scrap) {
 	let dec = scrap % metal['ref'];
 	dec = parseInt(dec.toFixed());
 
-	let res = whole + (dec / 10) + (dec / 100);
-	res = res.toFixed(2);
+	let val = whole + (dec / 10) + (dec / 100);
+	val = val.toFixed(2);
 
-	return res;
+	return val;
 }
