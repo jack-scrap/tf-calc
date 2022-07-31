@@ -18,10 +18,10 @@ $(document).ready(function() {
 	}
 	$("#no").append(`<div class="btn no">${0}</div>`);
 
-	$("#metal").append("<div class='btn metal' id='scrap'><img src='res/icon/scrap.png' /></div>");
-	$("#metal").append("<div class='btn metal' id='rec'><img src='res/icon/rec.png' /></div>");
-	$("#metal").append("<div class='btn metal' id='ref'><img src='res/icon/ref.png' /></div>");
-	$("#metal").append("<div class='btn metal' id='ref'><img src='res/icon/key.png' /></div>");
+	$("#pure").append("<div class='btn pure' id='scrap'><img src='res/icon/scrap.png' /></div>");
+	$("#pure").append("<div class='btn pure' id='rec'><img src='res/icon/rec.png' /></div>");
+	$("#pure").append("<div class='btn pure' id='ref'><img src='res/icon/ref.png' /></div>");
+	$("#pure").append("<div class='btn pure' id='ref'><img src='res/icon/key.png' /></div>");
 
 	$("#no").append("<div class='btn' id='enter'>Enter</div>");
 	$("#no").append("<div class='btn' id='clr'>CLR</div>");

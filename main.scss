@@ -80,7 +80,7 @@ body {
 		display: flex;
 
 		#no,
-		#metal {
+		#pure {
 			display: flex;
 			flex-wrap: wrap;
 			padding: $pad;
@@ -89,7 +89,7 @@ body {
 			 margin: $margin;
 			}
 
-			.metal,
+			.pure,
 			#enter,
 			#clr {
 				 flex-grow: 1;
@@ -100,7 +100,7 @@ body {
 			width: 192px;
 		}
 
-		#metal {
+		#pure {
 			margin-left: 20px;
 			height: 0;
 		}
