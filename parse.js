@@ -1,10 +1,8 @@
 const ws = " ";
 
-function eval(buff) {
-	// deserialize
-	let tok = [];
+function token(buff) {
 	let c = 0;
-
+	let tok = [];
 	while (c < buff.length) {
 		// number
 		if (!isNaN(buff[c])) {
@@ -35,6 +33,12 @@ function eval(buff) {
 		}
 	}
 
+	return tok;
+}
+
+function eval(buff) {
+	// deserialize
+	let tok = token(buff);
 	let res = parseInt(tok[0]);
 
 	if (!tok.length) {
