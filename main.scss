@@ -73,10 +73,6 @@ body {
 	#keyPad {
 		display: flex;
 
-		#no {
-			width: 192px;
-		}
-
 		#no,
 		#metal {
 			display: flex;
@@ -92,6 +88,10 @@ body {
 			#clr {
 				 flex-grow: 1;
 			}
+		}
+
+		#no {
+			width: 192px;
 		}
 	}
 }
