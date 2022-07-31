@@ -14,7 +14,7 @@ function eval(tok) {
 	}
 
 	if (tok.length % 2) {
-		return err("Inappropriate number of tokens");
+		return err(`Inappropriate number of tokens (${tok.length})`);
 	}
 
 	let i = 0;
