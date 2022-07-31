@@ -39,6 +39,7 @@ function token(buff) {
 function eval(buff) {
 	// deserialize
 	let tok = token(buff);
+
 	let res = parseInt(tok[0]);
 
 	if (!tok.length) {
