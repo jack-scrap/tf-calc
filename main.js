@@ -1,11 +1,15 @@
 let buff = "";
 let tok = [];
 
-$(document).ready(function() {
-	// screen
+function drawScr() {
 	buff = serialExpr(tok);
 
 	$("#scr").text(buff);
+}
+
+$(document).ready(function() {
+	// screen
+	drawScr();
 
 	for (let i = 0; i < 9; i++) {
 		$("#keyPad").append(`<div class="btn no">${i + 1}</div>`);
@@ -23,9 +27,7 @@ $(document).ready(function() {
 	$(".no").mousedown(function() {
 		tok.push($(this).text());
 
-		buff = serialExpr(tok);
-
-		$("#scr").text(buff);
+		drawScr();
 	});
 
 	$("#clr").mousedown(function() {
