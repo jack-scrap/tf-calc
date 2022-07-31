@@ -1,5 +1,3 @@
-const ws = " ";
-
 let buff = "";
 let tok = [];
 
