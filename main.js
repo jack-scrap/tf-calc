@@ -9,6 +9,10 @@ function drawScr() {
 function eval(tok) {
 	let res = 0;
 
+	if (tok.length % 2) {
+		return "Error: Inappropriate number of tokens";
+	}
+
 	let i = 0;
 	while (i < tok.length) {
 		switch (typeof tok[i]) {
