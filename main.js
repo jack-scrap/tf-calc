@@ -25,7 +25,6 @@ $(document).ready(function() {
 
 	$("#no").append("<div class='btn' id='enter'>Enter</div>");
 	$("#no").append("<div class='btn' id='clr'>CLR</div>");
-	$("#no").append("<div class='btn' id='spc'>SPC</div>");
 
 	// ctrl
 	$(".no").mousedown(function() {
@@ -72,14 +71,10 @@ $(document).ready(function() {
 		drawScr();
 	});
 
-	$("#spc").mousedown(function() {
-		tok += " ";
-
-		drawScr();
-	});
-
 	$("#enter").mousedown(function() {
-		let res = eval(tok);
+		let res = eval(buff);
+
+		alert(res);
 
 		let fmt = ref(res);
 
