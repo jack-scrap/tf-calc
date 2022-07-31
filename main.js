@@ -31,7 +31,9 @@ $(document).ready(function() {
 
 	// ctrl
 	$(".no").mousedown(function() {
-		tok.push(parseInt($(this).text()));
+		let i = $(this).index() + 1;
+
+		tok.push(parseInt(i));
 
 		drawScr();
 	});
