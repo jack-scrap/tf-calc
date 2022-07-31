@@ -9,6 +9,10 @@ function drawScr() {
 function eval(tok) {
 	let res = 0;
 
+	if (!tok.length) {
+		return "Error: No tokens";
+	}
+
 	if (tok.length % 2) {
 		return "Error: Inappropriate number of tokens";
 	}
