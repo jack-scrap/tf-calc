@@ -7,6 +7,21 @@ function drawScr() {
 }
 
 function eval(tok) {
+	let res = 0;
+
+	let i = 0;
+	while (i < tok.length) {
+		switch (typeof tok[i]) {
+			case "number":
+				res += tok[i];
+
+				break;
+		}
+
+		i++;
+	}
+
+	return res;
 }
 
 $(document).ready(function() {
@@ -69,6 +84,12 @@ $(document).ready(function() {
 	});
 
 	$("#enter").mousedown(function() {
-		eval(tok);
+		let res = eval(tok);
+
+		tok = [
+			res
+		];
+
+		drawScr();
 	});
 });
