@@ -88,7 +88,7 @@ $(document).ready(function() {
 
 		let fmt = ref(res);
 
-		buff = fmt + ' ref'
+		buff = fmt + ' ref';
 
 		drawScr();
 	});
