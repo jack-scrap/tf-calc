@@ -23,18 +23,18 @@ $(document).ready(function() {
 	}
 	$('#no').append(`<div class='btn no'>${0}</div>`);
 
-	$('#op').append('<div class="btn op">+</div>')
-	$('#op').append('<div class="btn op">-</div>')
-	$('#op').append('<div class="btn op">*</div>')
-	$('#op').append('<div class="btn op">/</div>')
+	$('#op').append('<div class="btn op"><span>+</span</div>')
+	$('#op').append('<div class="btn op"><span>-</span</div>')
+	$('#op').append('<div class="btn op"><span>*</span</div>')
+	$('#op').append('<div class="btn op"><span>/</span</div>')
 
-	$('#pure').append('<div class="btn pure" id="scrap"><img src="res/icon/scrap.png" /></div>');
-	$('#pure').append('<div class="btn pure" id="rec"><img src="res/icon/rec.png" /></div>');
-	$('#pure').append('<div class="btn pure" id="ref"><img src="res/icon/ref.png" /></div>');
-	$('#pure').append('<div class="btn pure" id="key"><img src="res/icon/key.png" /></div>');
+	$('#pure').append('<div class="btn pure" id="scrap"><span><img src="res/icon/scrap.png" /></span></div>');
+	$('#pure').append('<div class="btn pure" id="rec"><span><img src="res/icon/rec.png" /></span></div>');
+	$('#pure').append('<div class="btn pure" id="ref"><span><img src="res/icon/ref.png" /></span></div>');
+	$('#pure').append('<div class="btn pure" id="key"><span><img src="res/icon/key.png" /></span></div>');
 
-	$('#no').append('<div class="btn" id="enter">Enter</div>');
-	$('#no').append('<div class="btn" id="clr">CLR</div>');
+	$('#no').append('<div class="btn" id="enter"><span>Enter</span></div>');
+	$('#no').append('<div class="btn" id="clr"><span>CLR</span></div>');
 
 	// ctrl
 	$('.no').mousedown(function() {
