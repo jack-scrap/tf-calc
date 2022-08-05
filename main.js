@@ -1,6 +1,6 @@
-let buff = '';
+var buff = '';
 
-let keyPrice;
+var keyPrice;
 
 function drawScr() {
 	$('#scr').text(buff);
